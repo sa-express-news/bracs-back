@@ -106,5 +106,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
