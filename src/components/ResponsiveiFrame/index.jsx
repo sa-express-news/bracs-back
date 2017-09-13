@@ -1,21 +1,19 @@
 // @flow
 
-import React, {Component} from 'react';
+import React from 'react';
+
+type Props = {
+	src: string
+};
 
 import './ResponsiveiFrame.css';
 
-class ResponsiveiFrame extends Component {
-	props: {
-		src: string,
-	};
-
-	render(){
-		return(
-			<div className='iFrameContainer'>
-				<iframe src={this.props.src} frameBorder="0" allowFullScreen="true" />		
-			</div>
-		)
-	}
+const ResponsiveiFrame = (props: Props) => {
+	return (
+		<div className='iFrameContainer'>
+			<iframe src={props.src} frameBorder='0' allowFullScreen='true' />
+		</div>
+	)
 }
 
 export default ResponsiveiFrame;
