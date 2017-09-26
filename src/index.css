@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Sanchez|Suez+One');
+@import url("https://s3.amazonaws.com/projects.expressnews.com/wcm-normalize/normalize-wcm.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.17/c3.min.css");
+
 body {
   margin: 0;
   padding: 0;

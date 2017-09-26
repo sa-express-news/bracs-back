@@ -2,7 +2,7 @@
   "name": "expressnews-react-template",
   "version": "0.1.0",
   "private": true,
-  "s3Bucket": "http://projects.expressnews.com.s3-website-us-east-1.amazonaws.com/brac-story",
+  "s3Bucket": "http://projects.expressnews.com.s3-website-us-east-1.amazonaws.com/brac-story-article-test",
   "devDependencies": {
     "autoprefixer": "6.7.2",
     "babel-core": "6.22.1",
@@ -38,6 +38,7 @@
     "node-sass": "^4.5.2",
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
+    "postcss-prefixwrap": "^1.1.2",
     "precommit-hook": "^3.0.0",
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
@@ -52,6 +53,7 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.2",
+    "c3": "^0.4.18",
     "flow-bin": "^0.47.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
@@ -106,5 +108,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }

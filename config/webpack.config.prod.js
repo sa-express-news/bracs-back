@@ -1,6 +1,7 @@
 'use strict';
 
 var autoprefixer = require('autoprefixer');
+var prefixwrap = require('postcss-prefixwrap');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -188,7 +189,7 @@ module.exports = {
     ]
   },
   
-  // We use PostCSS for autoprefixing only.
+  // We use PostCSS for autoprefixing and to prefix css with WCM wrapper classes
   postcss: function() {
     return [
       autoprefixer({
@@ -199,6 +200,7 @@ module.exports = {
           'not ie < 9', // React doesn't support IE8 anyway
         ]
       }),
+      prefixwrap('.article-body .article-text'),
     ];
   },
   plugins: [
